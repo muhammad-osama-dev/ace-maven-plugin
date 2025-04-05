@@ -8,6 +8,36 @@
 	<version>1.0.0</version>
 	<packaging>ace-bar</packaging>
 	<name>${project.artifactId}</name>
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://route-expected-donkey-mohamedelshafei977-dev.apps.rm3.7wse.p1.openshiftapps.com/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>nexus-snapshots</id>
+			<url>http://route-expected-donkey-mohamedelshafei977-dev.apps.rm3.7wse.p1.openshiftapps.com/repository/maven-snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus-snapshots</id>
+			<url>http://route-expected-donkey-mohamedelshafei977-dev.apps.rm3.7wse.p1.openshiftapps.com/repository/maven-snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
 	<build>
 		<defaultGoal>package</defaultGoal>
 		<resources>
@@ -25,8 +55,8 @@
 					     **        general settings         **
 					     ************************************* -->
 					<!-- installation directories for toolkit and server (runtime) -->
-					<toolkitInstallDir>C:\PROGRA~1\IBM\ACE\12.0.6.0\tools</toolkitInstallDir>
-					<aceRunDir>C:\PROGRA~1\IBM\ACE\12.0.6.0\server\bin</aceRunDir>
+					<toolkitInstallDir>/home/value/learning/ace-12.0.10.0/tools/</toolkitInstallDir>
+					<aceRunDir>/home/value/learning/ace-12.0.10.0/server/bin</aceRunDir>
 					<!--  additional properties with default values  -->
 					<!-- (1) name of the resulting bar file 
 					     default: ${project.build.directory}/ace/${project.artifactId}-${project.version}.bar 
@@ -111,6 +141,7 @@
 					ibmintResources; optional; if set to true resources files (stored under src/main/java) of dependent java projects are added to the java jar file
 					<ibmintResources>true</ibmintResources>	
 					--> 
+					<doNotCompileJava>true</doNotCompileJava> 
 				</configuration>
 				<extensions>true</extensions>
 			</plugin>

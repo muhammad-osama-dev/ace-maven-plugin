@@ -13,6 +13,13 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
  	</properties>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://route-expected-donkey-mohamedelshafei977-dev.apps.rm3.7wse.p1.openshiftapps.com/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<dependencies>	
 		<dependency>
 			<groupId>org.apache.maven</groupId>

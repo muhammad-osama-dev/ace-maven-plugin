@@ -15,6 +15,12 @@
 		<maven.clean.plugin.version>3.1.0</maven.clean.plugin.version>
 		<maven.eclipse.plugin.version>2.10</maven.eclipse.plugin.version>
 	</properties>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://route-expected-donkey-mohamedelshafei977-dev.apps.rm3.7wse.p1.openshiftapps.com/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
